@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogeswar Vaitla — Quality Engineering & DevOps</title>
+    <meta name="description"
+        content="Portfolio of Yogeswar Vaitla — Quality Engineering and DevOps professional with 6+ years of experience in manual testing, CI/CD pipelines, and service monitoring.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">&lt;YV/&gt;</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor-dot"></div>
+    <div class="custom-cursor-outline" id="cursor-outline"></div>
+
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span><span class="logo-text">YV</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+                <li><a href="#education" class="nav-link" data-text="Education">Education</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta magnetic-btn">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <canvas id="particleCanvas"></canvas>
+            <div class="aurora"></div>
+            <div class="grid-overlay"></div>
+            <!-- Floating geometric shapes -->
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal-hero" style="--delay: 0.2s">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <p class="hero-greeting reveal-hero" style="--delay: 0.4s">Hello, I'm</p>
+            <h1 class="hero-name reveal-hero" style="--delay: 0.6s">
+                <span class="name-line">Yogeswar</span>
+                <span class="name-line name-accent">Vaitla<span class="name-dot">.</span></span>
+            </h1>
+            <div class="hero-tagline reveal-hero" style="--delay: 0.8s">
+                <span class="tagline-prefix">~/career $</span>
+                <span class="typed-text" id="typedText"></span>
+                <span class="typed-cursor">▊</span>
+            </div>
+            <p class="hero-description reveal-hero" style="--delay: 1.0s">
+                Quality Engineering & DevOps professional with <span class="text-highlight">6+ years</span> of
+                experience
+                crafting reliable systems through testing, CI/CD, and production monitoring.
+            </p>
+            <div class="hero-cta reveal-hero" style="--delay: 1.2s">
+                <a href="#contact" class="btn btn-primary magnetic-btn">
+                    <span class="btn-bg"></span>
+                    <span class="btn-text">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Get In Touch
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/in/yogeswar-vaitla-a72132129/" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
+                    <span class="btn-text">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                        </svg>
+                        LinkedIn
+                    </span>
+                </a>
+            </div>
+            <div class="hero-stats reveal-hero" style="--delay: 1.5s">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="6">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Exp.</span>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--fill: 85%"></div>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Companies</span>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--fill: 60%"></div>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Tools Mastered</span>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="--fill: 92%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,40 C240,100 480,0 720,50 C960,100 1200,10 1440,60 L1440,120 L0,120 Z"
+                fill="var(--bg-secondary)" />
+        </svg>
+    </div>
+
+    <!-- ============ TECH MARQUEE ============ -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="marquee-item">Jenkins</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Docker</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Grafana</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Kibana</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Prometheus</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Python</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Git CI/CD</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Linux</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">AWS</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">BrowserStack</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">AppDynamics</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Jira</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Figma</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Charles Proxy</span>
+                <span class="marquee-sep">◆</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-item">Jenkins</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Docker</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Grafana</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Kibana</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Prometheus</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Python</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Git CI/CD</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Linux</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">AWS</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">BrowserStack</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">AppDynamics</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Jira</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Figma</span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">Charles Proxy</span>
+                <span class="marquee-sep">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// who am i</span>
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <div class="about-intro">
+                        <p class="about-lead">
+                            I'm a passionate <span class="text-gradient">Quality Engineering</span> and
+                            <span class="text-gradient">DevOps</span> professional who believes that great software
+                            starts with great testing.
+                        </p>
+                    </div>
+                    <p>
+                        With over <strong>6 years of experience</strong> across manual testing, CI/CD enablement,
+                        and production monitoring in agile environments, I combine rigorous testing practices
+                        with hands-on observability expertise.
+                    </p>
+                    <p>
+                        My strength lies in converting <strong>system metrics into actionable insights</strong>,
+                        improving release confidence and system reliability across Linux environments,
+                        containerized applications, and modern DevOps toolchains.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-pill">
+                            <span class="pill-dot" style="--dot-color: #00e5ff"></span>
+                            Testing Expert
+                        </div>
+                        <div class="highlight-pill">
+                            <span class="pill-dot" style="--dot-color: #7c4dff"></span>
+                            DevOps Enabler
+                        </div>
+                        <div class="highlight-pill">
+                            <span class="pill-dot" style="--dot-color: #00e676"></span>
+                            Monitoring Pro
+                        </div>
+                        <div class="highlight-pill">
+                            <span class="pill-dot" style="--dot-color: #ff6e40"></span>
+                            Collaborator
+                        </div>
+                    </div>
+                    <div class="about-soft-skills">
+                        <span class="soft-tag">Communicator</span>
+                        <span class="soft-tag">Stakeholder Mgmt</span>
+                        <span class="soft-tag">Analytical</span>
+                        <span class="soft-tag">Adaptable</span>
+                        <span class="soft-tag">Team Player</span>
+                    </div>
+                </div>
+                <div class="about-terminal reveal-right">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">yogeswar@portfolio ~ zsh</span>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="terminal-line"><span class="prompt">❯</span> <span class="cmd">cat</span>
+                                about.json</div>
+                            <pre class="terminal-output" id="terminalOutput">{
+  <span class="json-key">"name"</span>: <span class="json-str">"Yogeswar Vaitla"</span>,
+  <span class="json-key">"role"</span>: <span class="json-str">"QE & DevOps Engineer"</span>,
+  <span class="json-key">"experience"</span>: <span class="json-str">"6+ years"</span>,
+  <span class="json-key">"location"</span>: <span class="json-str">"Hyderabad, India"</span>,
+  <span class="json-key">"specialties"</span>: [
+    <span class="json-str">"Quality Engineering"</span>,
+    <span class="json-str">"CI/CD Pipelines"</span>,
+    <span class="json-str">"Observability"</span>,
+    <span class="json-str">"Production Monitoring"</span>
+  ],
+  <span class="json-key">"languages"</span>: [
+    <span class="json-str">"English"</span>, <span class="json-str">"Hindi"</span>,
+    <span class="json-str">"Telugu"</span>, <span class="json-str">"Odiya"</span>
+  ],
+  <span class="json-key">"dob"</span>: <span class="json-str">"3rd February 1996"</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"✅ Open to Work"</span>
+}</pre>
+                            <div class="terminal-line"><span class="prompt">❯</span> <span
+                                    class="terminal-blink">▊</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CORE COMPETENCIES / SKILLS ============ -->
+    <section class="section competencies" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// what i bring</span>
+                <h2 class="section-title">Skills & <span class="text-gradient">Competencies</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Orbiting Skills Visual -->
+            <div class="skills-orbit reveal">
+                <div class="orbit-center">
+                    <span class="orbit-label">Core<br>Skills</span>
+                </div>
+                <div class="orbit-ring orbit-ring-1">
+                    <div class="orbit-item" style="--angle: 0deg"><span>Jenkins</span></div>
+                    <div class="orbit-item" style="--angle: 60deg"><span>Docker</span></div>
+                    <div class="orbit-item" style="--angle: 120deg"><span>Grafana</span></div>
+                    <div class="orbit-item" style="--angle: 180deg"><span>Git CI/CD</span></div>
+                    <div class="orbit-item" style="--angle: 240deg"><span>Kibana</span></div>
+                    <div class="orbit-item" style="--angle: 300deg"><span>Linux</span></div>
+                </div>
+                <div class="orbit-ring orbit-ring-2">
+                    <div class="orbit-item" style="--angle: 30deg"><span>Python</span></div>
+                    <div class="orbit-item" style="--angle: 90deg"><span>Prometheus</span></div>
+                    <div class="orbit-item" style="--angle: 150deg"><span>AWS</span></div>
+                    <div class="orbit-item" style="--angle: 210deg"><span>Jira</span></div>
+                    <div class="orbit-item" style="--angle: 270deg"><span>AppDynamics</span></div>
+                    <div class="orbit-item" style="--angle: 330deg"><span>BrowserStack</span></div>
+                </div>
+            </div>
+
+            <!-- Competency Cards -->
+            <div class="competency-grid">
+                <div class="competency-card reveal-up" style="--delay: 0.1s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                            stroke-width="1.5">
+                            <path d="M9 5H2v7l6.29 6.29c.94.94 2.48.94 3.42 0l4.58-4.58c.94-.94.94-2.48 0-3.42L9 5z" />
+                            <path d="M6 9.01V9" />
+                            <path d="M22 8l-4 4" />
+                            <path d="M22 4l-8 8" />
+                        </svg>
+                    </div>
+                    <h3>Quality Engineering</h3>
+                    <p>Test governance, strategy design, and defect management across complex software systems.</p>
+                </div>
+                <div class="competency-card reveal-up" style="--delay: 0.2s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)"
+                            stroke-width="1.5">
+                            <path d="M12 2a10 10 0 1 0 10 10h-10V2z" />
+                            <path d="M21.18 8.02c-1-2.3-2.85-4.17-5.18-5.18" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Building dashboards and alerts for proactive service health and performance tracking.</p>
+                </div>
+                <div class="competency-card reveal-up" style="--delay: 0.3s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3>CI/CD Enablement</h3>
+                    <p>Building and maintaining deployment pipelines for consistent, automated releases.</p>
+                </div>
+                <div class="competency-card reveal-up" style="--delay: 0.15s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)"
+                            stroke-width="1.5">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3>DevOps Toolchain</h3>
+                    <p>Jenkins, Docker, Git CI/CD and monitoring tools woven into unified workflows.</p>
+                </div>
+                <div class="competency-card reveal-up" style="--delay: 0.25s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Cross-Platform Testing</h3>
+                    <p>Cross-browser, cross-device validation ensuring consistent user experience everywhere.</p>
+                </div>
+                <div class="competency-card reveal-up" style="--delay: 0.35s">
+                    <div class="card-glow"></div>
+                    <div class="card-border"></div>
+                    <div class="competency-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)"
+                            stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Cross-Functional Collaboration</h3>
+                    <p>Effective partnership with dev, product, and platform engineering teams.</p>
+                </div>
+            </div>
+
+            <!-- Technical Skills Bars -->
+            <div class="skills-section">
+                <h3 class="subsection-title reveal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    Technical Toolkit
+                </h3>
+                <div class="skills-categories">
+                    <div class="skill-category reveal-left" style="--delay: 0.1s">
+                        <div class="category-header">
+                            <div class="category-icon-wrap" style="--icon-color: var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                </svg>
+                            </div>
+                            <h4>Testing & Quality</h4>
+                        </div>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar"><span class="skill-name">Manual Testing</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="95"></div>
+                                </div><span class="skill-pct">95%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Exploratory Testing</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="90"></div>
+                                </div><span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Test Case Design</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="92"></div>
+                                </div><span class="skill-pct">92%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Cross-Browser Testing</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="88"></div>
+                                </div><span class="skill-pct">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-right" style="--delay: 0.2s">
+                        <div class="category-header">
+                            <div class="category-icon-wrap" style="--icon-color: var(--accent-secondary)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <h4>CI/CD & DevOps</h4>
+                        </div>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar"><span class="skill-name">Jenkins</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="85"></div>
+                                </div><span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Git CI/CD</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="85"></div>
+                                </div><span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Docker</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="80"></div>
+                                </div><span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Python Automation</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="70"></div>
+                                </div><span class="skill-pct">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-left" style="--delay: 0.3s">
+                        <div class="category-header">
+                            <div class="category-icon-wrap" style="--icon-color: var(--accent-green)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2a10 10 0 1 0 10 10h-10V2z" />
+                                    <path d="M21.18 8.02c-1-2.3-2.85-4.17-5.18-5.18" />
+                                </svg>
+                            </div>
+                            <h4>Monitoring & Observability</h4>
+                        </div>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar"><span class="skill-name">Grafana</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="90"></div>
+                                </div><span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Kibana / ELK</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="88"></div>
+                                </div><span class="skill-pct">88%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Prometheus</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="78"></div>
+                                </div><span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">AppDynamics</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="75"></div>
+                                </div><span class="skill-pct">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-right" style="--delay: 0.4s">
+                        <div class="category-header">
+                            <div class="category-icon-wrap" style="--icon-color: var(--accent-warm)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                            </div>
+                            <h4>Tools & Platforms</h4>
+                        </div>
+                        <div class="skill-bar-wrap">
+                            <div class="skill-bar"><span class="skill-name">Linux</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="78"></div>
+                                </div><span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">BrowserStack</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="85"></div>
+                                </div><span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">Jira</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="92"></div>
+                                </div><span class="skill-pct">92%</span>
+                            </div>
+                            <div class="skill-bar"><span class="skill-name">AWS (Migration)</span>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-width="60"></div>
+                                </div><span class="skill-pct">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// where i've worked</span>
+                <h2 class="section-title">Work <span class="text-gradient">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <div class="timeline-progress" id="timelineProgress"></div>
+
+                <!-- Job 1 -->
+                <div class="timeline-item reveal-timeline">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <div class="marker-ping"></div>
+                        </div>
+                        <span class="marker-year">NOW</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-accent-line"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-badge badge-current">
+                                <span class="badge-pulse"></span>
+                                Current Role
+                            </span>
+                            <span class="timeline-date">Oct 2025 — Present</span>
+                        </div>
+                        <h3 class="timeline-title">Observability / Monitoring Engineer</h3>
+                        <h4 class="timeline-company">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg>
+                            HCL Technologies — Hyderabad
+                        </h4>
+                        <p class="timeline-role">Senior Technical Lead — Individual Contributor</p>
+                        <p class="timeline-project">Enterprise Monitoring & Observability Platform</p>
+                        <ul class="timeline-details">
+                            <li>Designing & building <strong>Grafana dashboards</strong> to monitor service health,
+                                performance, & availability across enterprise production services.</li>
+                            <li>Configuring alerts for <strong>early detection</strong> of service degradation and
+                                operational risks.</li>
+                            <li>Analyzing metrics and logs for <strong>incident investigation</strong> and root cause
+                                identification.</li>
+                            <li>Applying <strong>Linux fundamentals</strong> and monitoring best practices to strengthen
+                                operational stability.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Prometheus</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Observability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item reveal-timeline">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <span class="marker-year">'24</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-accent-line" style="--line-color: var(--accent-secondary)"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-date">Apr 2024 — Sep 2025</span>
+                        </div>
+                        <h3 class="timeline-title">DevOps Engineer</h3>
+                        <h4 class="timeline-company">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg>
+                            Entain India — Hyderabad
+                        </h4>
+                        <p class="timeline-project">Bingo Platform — CI/CD & Observability Enablement</p>
+                        <ul class="timeline-details">
+                            <li>Built & maintained <strong>CI/CD pipelines</strong> using Jenkins & Git CI/CD, improving
+                                deployment consistency.</li>
+                            <li>Created & managed <strong>Docker containers</strong> for standardized environments and
+                                repeatable workflows.</li>
+                            <li>Designed <strong>Grafana dashboards</strong> for Bingo microservices monitoring.</li>
+                            <li>Configured <strong>ELK (Kibana) dashboards</strong> for real-time log analysis.</li>
+                            <li>Contributed to the <strong>on-premise to AWS migration</strong> — environment readiness
+                                & deployment.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git CI/CD</span>
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Kibana</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item reveal-timeline">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <span class="marker-year">'19</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-accent-line" style="--line-color: var(--accent-green)"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-date">Apr 2019 — Mar 2024</span>
+                        </div>
+                        <h3 class="timeline-title">Senior Test Engineer</h3>
+                        <h4 class="timeline-company">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg>
+                            Entain India — Hyderabad
+                        </h4>
+                        <p class="timeline-project">Bingo — Real-Money Gaming Platform</p>
+                        <ul class="timeline-details">
+                            <li>Led <strong>end-to-end manual testing</strong> for real-money gaming applications
+                                ensuring compliance.</li>
+                            <li>Defined test strategies and executed <strong>exploratory testing</strong> across web and
+                                mobile.</li>
+                            <li>Performed <strong>cross-browser and cross-device</strong> validation using BrowserStack.
+                            </li>
+                            <li>Integrated <strong>Kibana log monitoring</strong> to enhance defect identification.</li>
+                            <li>Partnered with teams to accelerate <strong>defect resolution</strong> and release
+                                quality.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Manual Testing</span>
+                            <span class="tag">BrowserStack</span>
+                            <span class="tag">Kibana</span>
+                            <span class="tag">Jira</span>
+                            <span class="tag">Cross-Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// my background</span>
+                <h2 class="section-title">Education <span class="text-gradient">Journey</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-timeline">
+                <div class="edu-card reveal-up" style="--delay: 0.1s">
+                    <div class="edu-card-inner">
+                        <div class="edu-year-badge">2018</div>
+                        <div class="edu-connector"></div>
+                        <div class="edu-content">
+                            <h3>Bachelor of Business Administration</h3>
+                            <p class="edu-institution">Adikavi Nannaya University, Rajahmundry</p>
+                            <div class="edu-meta">
+                                <span class="edu-gpa"><span class="gpa-dot"></span> GPA: 6.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-card reveal-up" style="--delay: 0.2s">
+                    <div class="edu-card-inner">
+                        <div class="edu-year-badge">2015</div>
+                        <div class="edu-connector"></div>
+                        <div class="edu-content">
+                            <h3>Intermediate — Economics & Commerce</h3>
+                            <p class="edu-institution">Aditya Junior College, Kakinada</p>
+                            <div class="edu-meta">
+                                <span class="edu-gpa"><span class="gpa-dot"></span> GPA: 6.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-card reveal-up" style="--delay: 0.3s">
+                    <div class="edu-card-inner">
+                        <div class="edu-year-badge">2013</div>
+                        <div class="edu-connector"></div>
+                        <div class="edu-content">
+                            <h3>Secondary Education</h3>
+                            <p class="edu-institution">Vikash Educational Institution, Bargarh</p>
+                            <div class="edu-meta">
+                                <span class="edu-gpa"><span class="gpa-dot"></span> GPA: 7.2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">// let's connect</span>
+                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="contact-intro reveal">
+                I'm actively exploring new opportunities in <span class="text-gradient">QA Engineering</span>,
+                <span class="text-gradient">DevOps</span>, or <span class="text-gradient">Observability</span> roles.
+                Let's build something reliable together!
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:yogesh.vaitla@gmail.com" class="contact-card magnetic-btn reveal-up"
+                    style="--delay: 0.1s">
+                    <div class="card-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                            stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p>yogesh.vaitla@gmail.com</p>
+                </a>
+                <a href="tel:+919937531116" class="contact-card magnetic-btn reveal-up" style="--delay: 0.2s">
+                    <div class="card-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)"
+                            stroke-width="1.5">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91-9937531116</p>
+                </a>
+                <a href="https://www.linkedin.com/in/yogeswar-vaitla-a72132129/" target="_blank"
+                    rel="noopener noreferrer" class="contact-card magnetic-btn reveal-up" style="--delay: 0.3s">
+                    <div class="card-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--accent-green)">
+                            <path
+                                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                        </svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>yogeswar-vaitla</p>
+                </a>
+                <div class="contact-card reveal-up" style="--delay: 0.4s">
+                    <div class="card-glow"></div>
+                    <div class="contact-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-warm)"
+                            stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Hyderabad, 500090</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">&lt;YV/&gt;</span>
+                    <p class="footer-tagline">Crafted with precision & passion</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:yogesh.vaitla@gmail.com" class="footer-link" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yogeswar-vaitla-a72132129/" target="_blank"
+                        rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Yogeswar Vaitla. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg class="progress-ring" width="48" height="48">
+            <circle class="progress-ring-bg" cx="24" cy="24" r="20" />
+            <circle class="progress-ring-fill" id="progressRingFill" cx="24" cy="24" r="20" />
+        </svg>
+        <svg class="back-to-top-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
